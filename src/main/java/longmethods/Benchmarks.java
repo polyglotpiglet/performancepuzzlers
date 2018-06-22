@@ -18,8 +18,6 @@ public class Benchmarks {
     }
 
     @Benchmark
-//    @BenchmarkMode(Mode.AverageTime)
-//    @OutputTimeUnit(TimeUnit.NANOSECONDS)
     public void sum0To1396() {
         int result = LongMethods.sum0To1396();
     }
@@ -29,7 +27,6 @@ public class Benchmarks {
         Options opt = new OptionsBuilder()
                 .include(Benchmarks.class.getSimpleName())
                 .forks(1)
-//                .measurementIterations(5)
                 .build();
 
         new Runner(opt).run();
